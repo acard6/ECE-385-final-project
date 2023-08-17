@@ -1,0 +1,16 @@
+//FSM for determining the screen the screen
+
+module screen ( input [7:0]keycode, 
+					 input reset, clk,
+					 
+					 output[3:0] state);
+	 
+	 enum logic[3:0] curr_state, next_state;
+	 
+	always_ff @ (posedge clk)
+	 begin
+		 if (reset) 
+			 State <= Halted;
+		 else 
+			 State <= Next_state;
+	 end 

@@ -1,0 +1,20 @@
+module keywait(input Clk, Reset, touching, shape_reset,
+					input logic [7:0] keycode,
+					output logic [2:0] key);
+					
+	 enum logic[2:0] {idle
+							key_A1, 
+							key_A2, 
+							key_S1, 
+							key_S2, 
+							key_D1, 
+							key_D2} state, next_state;
+	 
+	 always_ff @ (posedge Clk or posedge Reset) begin
+		 if (Reset)
+			 state <= idle;
+		 else
+			 state <= next_state;
+	 end
+		
+endmodule 

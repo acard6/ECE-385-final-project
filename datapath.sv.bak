@@ -1,0 +1,4 @@
+module datapath(input Clk, Reset, game_reset,
+					 output signal);
+					 
+		

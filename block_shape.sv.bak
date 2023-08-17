@@ -1,0 +1,5 @@
+module block_shape(input [2:0] shape_num,
+						 input [1:0] rotation,
+						 output logic [9:0] shape_size_x, shape_size_y);
+
+endmodule 

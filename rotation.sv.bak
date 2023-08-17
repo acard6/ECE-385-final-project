@@ -1,0 +1,40 @@
+module rotating (input Reset, Clk, 
+					  input logic [7:0] keycode,
+					  output logic[1:0] rotation);
+		
+	 enum logic[2:0] {rot_01,
+							rot_02,
+							rot_11,
+							rot_12,
+							rot_21,
+							rot_22,
+							rot_31,
+							rot_32} state, next_state;
+	 
+	 always_ff @ (posedge Clk or posedge Reset) begin 
+		 if (Reset)
+			 state <= state_01;
+		 else
+			 state <= next_state;
+	 end 
+	 
+	 always_comb begin 
+		 next_state = state
+		 unique case (state)
+			 state_01:
+			 
+			 state_02:
+			 
+			 state_11:
+			 
+			 state_12:
+			 
+			 state_21:
+			 
+			 state_22:
+			 
+			 state_31:
+			 
+			 state_32:
+	 
+	 end 
